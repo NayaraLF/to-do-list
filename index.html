@@ -4,6 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do-list</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="player-info">
+          <div class="player-stats">
+            <div class="player-name">Guerreiro da organização</div>
+            <div class="player-title" id="playerTitle">Iniciante</div>
+
+            <div class="xp-bar-container">
+              <div class="xp-bar" id="xpBar">
+                <span id="xpText">0 / 100 XP </span>
+              </div>
+            </div>
+            <div class="xp-info">Nível <span id="levelDisplay">1</span></div>
+          </div>
+
+          <div class="achievements-mini" id="achievementsMini">
+            <div
+              class="achievement-badge locked"
+              title="Primeira Conquista - Complete 1 tarefa"
+            >
+              🏆
+            </div>
+            <div
+              class="achievement-badge locked"
+              title="Produtivo - Complete 10 tarefas"
+            >
+              ⭐
+            </div>
+            <div
+              class="achievement-badge locked"
+              title="Mestre - Complete 50 tarefas"
+            >
+              👑
+            </div>
+            <div class="achievement-badge locked" title="Sequência 7 dias">
+              🔥
+            </div>
+          </div>
+
+             <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number" id="totalTasks">0</div>
+                    <div class="stat-label">Tarefas Criadas</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="completedTasks">0</div>
+                    <div class="stat-label">Concluídas</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="totalXP">0</div>
+                    <div class="stat-label">XP Total</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="streak">0</div>
+                    <div class="stat-label">Dias Seguidos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+            <h2 style="margin-bottom: 20px; color: #1e3c72;">📋 Suas Missões</h2>
+            
+            <form class="add-task-form" id="addTaskForm">
+                <input 
+                    type="text" 
+                    class="task-input" 
+                    id="taskInput" 
+                    placeholder="Adicione uma nova missão..." 
+                    required
+                >
+                <select class="category-select" id="categorySelect">
+                    <option value="trabalho">💼 Trabalho</option>
+                    <option value="pessoal">❤️ Pessoal</option>
+                    <option value="estudos">📚 Estudos</option>
+                    <option value="saude">💪 Saúde</option>
+                </select>
+                <button type="submit" class="add-btn">+ Adicionar</button>
+            </form>
+
+            <div class="tasks-container" id="tasksContainer">
+                <div class="empty-state">
+                    <div class="empty-state-icon">🎯</div>
+                    <p>Nenhuma missão ainda. Adicione uma para começar sua jornada!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+    <div class="level-up-animation" id="levelUpAnimation"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  </body>
 </html>
